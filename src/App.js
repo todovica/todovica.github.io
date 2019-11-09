@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 import Grid from '@material-ui/core/Grid';
@@ -88,7 +87,7 @@ function App() {
       
       <Avatar alt="Remy Sharp" src={avatar} className={classes.img} />
       <Typography variant="h6" component="h5" className={classes.greeting} >
-        {'Hi! I\'m Ana, a software developer you are looking for'}
+        {'software developer you are looking for'}
       </Typography>
              
       </Grid>
@@ -98,7 +97,7 @@ function App() {
     <Grid container direction="column" justify="flex-start" alignItems="center" >
     <Grid container className={classes.middle} direction="column" justify="flex-start" alignItems="center" >
       <Typography variant="h6" component="h5" className={classes.checkoutcode} >
-        {'Find out more about me'}
+        {'more about me'}
       </Typography>
       <Grid container  direction="row" justify="center" alignItems="center" className={classes.cards}>
     
@@ -106,17 +105,17 @@ function App() {
           image={githubcard}
           title={"GitHub"}
           link={'https://github.com/todovica'}
-          content={'Here you can find some of my draft work'} />
+          content={'Here you can find some of my draft work.'} />
           <LinkCard 
           image={linkedincard}
           title={"LinkedIn"}
           link={'https://www.linkedin.com/in/ana-todovic-64b344134/'}
-          content={'Story board'} />
+          content={'Check out my profile.'} />
           <LinkCard 
           image={cvcard}
           title={"CV"}
-          link={'https://github.com/todovica'}
-          content={'Check out my professional resume'} />
+          link={'https://todovica.github.io/Ana%20Todovi%C4%87%20CV.pdf'}
+          content={'Check out my professional resume.'} />
       </Grid>
       </Grid>
     </Grid>
@@ -126,7 +125,7 @@ function App() {
     <Grid container direction="column" justify="flex-start" alignItems="center" >
     <Grid container className={classes.start} direction="column" justify="flex-start" alignItems="center" >
       <Typography variant="h6" component="h5" className={classes.currentlyWorkingOnNote} >
-        {'I\'m currently working on'}
+        {'currently working on'}
       </Typography>
       <Grid container  direction="row" justify="center" alignItems="center" className={classes.cards}>
     
