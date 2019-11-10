@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e8387932829bba846b431d95bba35539",
+    "revision": "ca0782d34d8f0efafddd06b115089c78",
     "url": "/index.html"
   },
   {
-    "revision": "d606d3be589bc7e978b1",
+    "revision": "9e2c403225da15fa1c9a",
     "url": "/static/css/main.152e1063.chunk.css"
   },
   {
-    "revision": "bcc7b876188c74480076",
-    "url": "/static/js/2.dda7d0e7.chunk.js"
+    "revision": "abd8e6efeaf21e0a7c57",
+    "url": "/static/js/2.ee2eeb30.chunk.js"
   },
   {
-    "revision": "d606d3be589bc7e978b1",
-    "url": "/static/js/main.f473a1d0.chunk.js"
+    "revision": "9e2c403225da15fa1c9a",
+    "url": "/static/js/main.1ea4d96c.chunk.js"
   },
   {
     "revision": "05129d9571d833ef1980",
@@ -22,6 +22,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ced73e0124bccec3c335e3d280bb5f0d",
     "url": "/static/media/avatar.ced73e01.jpg"
+  },
+  {
+    "revision": "a0b617e3f167a9e4564ca0669a6e2be7",
+    "url": "/static/media/climbrecordcard.a0b617e3.png"
   },
   {
     "revision": "28cab272045788c1716611a451308bc5",
