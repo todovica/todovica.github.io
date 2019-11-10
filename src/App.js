@@ -182,7 +182,7 @@ function App(props) {
           <LinkCard 
           image={cvcard}
           title={"CV"}
-          link={'https://todovica.github.io/Ana%20Todovi%C4%87%20CV.pdf'}
+          link={'https://todovica.github.io/ana_todovic_cv.pdf'}
           content={'Check out my professional resume.'} />
       </Grid>
       </Grid>
@@ -196,12 +196,6 @@ function App(props) {
         {'currently working on'}
       </Typography>
       <Grid container  direction="row" justify="center" alignItems="center" className={classes.cards}>
-    
-        <LinkCard 
-          image={githubcard}
-          title={"GitHub"}
-          link={'https://github.com/todovica'}
-          content={'Here you can find some of my draft work'} />
           <LinkCard 
           image={dreamcatchercard}
           title={"Dream Catcher"}
@@ -209,9 +203,9 @@ function App(props) {
           content={'Story board'} />
           <LinkCard 
           image={cvcard}
-          title={"CV"}
-          link={'https://github.com/todovica'}
-          content={'Check out my professional resume'} />
+          title={"Climb Record App"}
+          link={'https://todovica.github.io/climb-record/login'}
+          content={'App for climbers to track results'} />
       </Grid>
       </Grid>
     </Grid>
