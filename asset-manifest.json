@@ -1,27 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.152e1063.chunk.css",
-    "main.js": "/static/js/main.2c474e5e.chunk.js",
-    "main.js.map": "/static/js/main.2c474e5e.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.a5eaf332.js",
-    "runtime-main.js.map": "/static/js/runtime-main.a5eaf332.js.map",
-    "static/js/2.ee2eeb30.chunk.js": "/static/js/2.ee2eeb30.chunk.js",
-    "static/js/2.ee2eeb30.chunk.js.map": "/static/js/2.ee2eeb30.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.bfcde592409c620e2f3ddec13d17dce3.js": "/precache-manifest.bfcde592409c620e2f3ddec13d17dce3.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.152e1063.chunk.css.map": "/static/css/main.152e1063.chunk.css.map",
-    "static/media/avatar.jpg": "/static/media/avatar.ced73e01.jpg",
-    "static/media/climbrecordcard.png": "/static/media/climbrecordcard.a0b617e3.png",
-    "static/media/cvcard.png": "/static/media/cvcard.28cab272.png",
-    "static/media/dreamcatchercard.png": "/static/media/dreamcatchercard.aed29f11.png",
-    "static/media/githubcard.png": "/static/media/githubcard.1d3094df.png",
-    "static/media/linkedincard.png": "/static/media/linkedincard.ef62adf4.png"
+    "main.css": "/rockandfriendsweb/static/css/main.0b3051b3.chunk.css",
+    "main.js": "/rockandfriendsweb/static/js/main.c931a269.chunk.js",
+    "main.js.map": "/rockandfriendsweb/static/js/main.c931a269.chunk.js.map",
+    "runtime-main.js": "/rockandfriendsweb/static/js/runtime-main.ac7e2f74.js",
+    "runtime-main.js.map": "/rockandfriendsweb/static/js/runtime-main.ac7e2f74.js.map",
+    "static/js/2.c3b9d598.chunk.js": "/rockandfriendsweb/static/js/2.c3b9d598.chunk.js",
+    "static/js/2.c3b9d598.chunk.js.map": "/rockandfriendsweb/static/js/2.c3b9d598.chunk.js.map",
+    "index.html": "/rockandfriendsweb/index.html",
+    "precache-manifest.d6f74e0f2459449a269084b330bac0a4.js": "/rockandfriendsweb/precache-manifest.d6f74e0f2459449a269084b330bac0a4.js",
+    "service-worker.js": "/rockandfriendsweb/service-worker.js",
+    "static/css/main.0b3051b3.chunk.css.map": "/rockandfriendsweb/static/css/main.0b3051b3.chunk.css.map",
+    "static/js/2.c3b9d598.chunk.js.LICENSE.txt": "/rockandfriendsweb/static/js/2.c3b9d598.chunk.js.LICENSE.txt",
+    "static/media/logo.png": "/rockandfriendsweb/static/media/logo.1b0f7a9b.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.a5eaf332.js",
-    "static/js/2.ee2eeb30.chunk.js",
-    "static/css/main.152e1063.chunk.css",
-    "static/js/main.2c474e5e.chunk.js"
+    "static/js/runtime-main.ac7e2f74.js",
+    "static/js/2.c3b9d598.chunk.js",
+    "static/css/main.0b3051b3.chunk.css",
+    "static/js/main.c931a269.chunk.js"
   ]
 }
