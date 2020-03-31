@@ -5,22 +5,12 @@ import './App.css';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import { makeStyles } from '@material-ui/core/styles';
-import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 
-import linkedincard from './components/linkedincard.png';
-import githubcard from './components/githubcard.png'
-import dreamcatchercard from './components/dreamcatchercard.png'
-import cvcard from './components/cvcard.png'
-import border1 from './border1.png'
-import border2 from './border2.png'
-import avatar from './avatar.jpg'
-import LinkCard from './components/LinkCard';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Fab from '@material-ui/core/Fab';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
@@ -28,79 +18,40 @@ import Zoom from '@material-ui/core/Zoom';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 
+import Home from './Home';
+import TermsOfService from './TermsOfService';
+import PrivacyPolicy from './PrivacyPolicy';
+
 
 const useStyles = makeStyles(theme => ({
   flex1: {
     flexGrow: 1,
   },
   appbar: {
-    color: '#827e22',
-    backgroundColor: 'rgb(238, 238, 238)',
-    opacity: '0.5'
+    color: 'white',
+    backgroundColor: '#3A606E'
   },
-  start: {
-    paddingTop: '100px',
-    backgroundColor: '#eeeeee',
-  },
-  middle: {
-    paddingTop: '70px',
-    backgroundColor: 'white',
-  },
-  img: {
-    width: '250px',
-    height: '250px',
-  },
-  greeting: {
-    textAlign: "center",
-    color: "#827e22",
-    padding: '20px'
-  },
-
-  checkoutcode: {
-    textAlign: "center",
-    color: "#c8cbde",
-    
-    marginBottom: '100px'
-  },
-  currentlyWorkingOnNote: {
-    textAlign: "center",
-    color: "#827e22",
-    
-    marginBottom: '100px'
-  },
-  cards: {
-    marginBottom: '100px',
-  },
-  border1: {
-    backgroundImage: `url(${border1})`,
-    backgroundColor: '#ebf0f1',
-    backgroundSize: 'cover',
-    minHeight: '200px',
-    minWidth: '100%'
-
-  },
-  border2: {
-    backgroundImage: `url(${border2})`,
-    backgroundColor: '#ebf0f1',
-    backgroundSize: 'cover',
-    minHeight: '200px',
-    minWidth: '100%'
-
-  },
-  control: {
-    padding: theme.spacing(2),
+  homeTab: {
+    backgroundColor: '#3A606E'
   },
   zoom: {
     position: 'fixed',
     bottom: theme.spacing(2),
     right: theme.spacing(2),
   },
+  indicator: {
+    backgroundColor: '#FFF'
+  },
+  bottomNavigation: {
+    backgroundColor: '#3A606E'
+  }
 }));
 
 
 function ScrollTop(props) {
   const { children, window } = props;
   const classes = useStyles();
+
   // Note that you normally won't need to set the window ref as useScrollTrigger
   // will default to window.
   // This is only being set here because the demo is in an iframe.
@@ -131,94 +82,69 @@ ScrollTop.propTypes = {
   children: PropTypes.element.isRequired,
 };
 
+
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <Typography
+      component="div"
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && <Box p={3}>{children}</Box>}
+    </Typography>
+  );
+}
+
 function App(props) {
   const classes = useStyles();
-  
-  
+  const [value, setValue] = React.useState(0);
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
   return (
     <React.Fragment>
       <AppBar position="fixed" className={classes.appbar} >
         <Toolbar>
           <Typography variant="h6" className={classes.flex1}>
-            Ana Todovic
+            {'Rock & Friends'}
           </Typography>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" onClick={()=> window.location = 'https://github.com/todovica'}>
-            <GitHubIcon />
-          </IconButton>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" onClick={()=> window.location = 'https://www.linkedin.com/in/ana-todovic-64b344134/'}>
-            <LinkedInIcon  />
-          </IconButton>
+          <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" classes={{ indicator: classes.indicator }}>
+            <Tab className={classes.homeTab} label="Home" />
+            <Tab label="Terms Of Use" />
+            <Tab label="Privacy Policy" />
+          </Tabs>
         </Toolbar>
       </AppBar>
       <Toolbar id="back-to-top-anchor" />
 
-      <Grid container className={classes.start} direction="column" justify="flex-start" alignItems="center" >
-      <Avatar alt="Remy Sharp" src={avatar} className={classes.img} />
-      <Typography variant="h6" component="h5" className={classes.greeting} >
-        {'software developer you are looking for'}
-      </Typography>
-             
-      </Grid>
-      <Grid container direction="column" justify="flex-start" alignItems="center" >
-      <Box className={classes.border1}></Box>
-    </Grid>
-    <Grid container direction="column" justify="flex-start" alignItems="center" >
-    <Grid container className={classes.middle} direction="column" justify="flex-start" alignItems="center" >
-      <Typography variant="h6" component="h5" className={classes.checkoutcode} >
-        {'more about me'}
-      </Typography>
-      <Grid container  direction="row" justify="center" alignItems="center" className={classes.cards}>
-    
-        <LinkCard 
-          image={githubcard}
-          title={"GitHub"}
-          link={'https://github.com/todovica'}
-          content={'Here you can find some of my draft work.'} />
-          <LinkCard 
-          image={linkedincard}
-          title={"LinkedIn"}
-          link={'https://www.linkedin.com/in/ana-todovic-64b344134/'}
-          content={'Check out my profile.'} />
-          <LinkCard 
-          image={cvcard}
-          title={"CV"}
-          link={'https://todovica.github.io/ana_todovic_cv.pdf'}
-          content={'Check out my professional resume.'} />
-      </Grid>
-      </Grid>
-    </Grid>
-    <Grid container direction="column" justify="flex-start" alignItems="center" >
-      <Box className={classes.border2}></Box>
-    </Grid>
-    <Grid container direction="column" justify="flex-start" alignItems="center" >
-    <Grid container className={classes.start} direction="column" justify="flex-start" alignItems="center" >
-      <Typography variant="h6" component="h5" className={classes.currentlyWorkingOnNote} >
-        {'currently working on'}
-      </Typography>
-      <Grid container  direction="row" justify="center" alignItems="center" className={classes.cards}>
-          <LinkCard 
-          image={dreamcatchercard}
-          title={"Dream Catcher"}
-          link={'https://todovica.github.io/dream-catcher/'}
-          content={'Story board'} />
-          <LinkCard 
-          image={cvcard}
-          title={"Climb Record App"}
-          link={'https://todovica.github.io/climb-record/login'}
-          content={'App for climbers to track results'} />
-      </Grid>
-      </Grid>
-    </Grid>
-    <BottomNavigation >
-      <BottomNavigationAction label="Ana Todovic" value="Ana Todovic" icon={'by Ana Todovic'} />
-    </BottomNavigation>
-    <ScrollTop {...props}>
-      <Grid container direction="row" justify="center" alignItems="center" >
-        <Fab color="secondary" aria-label="scroll back to top" style={{ backgroundColor: '#827e22' }}>
-          <KeyboardArrowUpIcon />
-        </Fab>
-      </Grid>
-    </ScrollTop>
+      
+      <TabPanel className={classes.homeTab} value={value} index={0}>
+        <Home />
+      </TabPanel>
+      <TabPanel value={value} index={1}>
+        <TermsOfService />
+      </TabPanel>
+      <TabPanel value={value} index={2}>
+        <PrivacyPolicy />
+      </TabPanel>
+      
+      
+      <BottomNavigation className={classes.bottomNavigation}>
+        <BottomNavigationAction label='Rock \& Friends' value='Rock \& Friends' icon={'by Rock \& Friends'} />
+      </BottomNavigation>
+      <ScrollTop {...props}>
+        <Grid container direction="row" justify="center" alignItems="center" >
+          <Fab color="secondary" aria-label="scroll back to top" style={{ backgroundColor: '#C1C1C1' }}>
+            <KeyboardArrowUpIcon />
+          </Fab>
+        </Grid>
+      </ScrollTop>
     </React.Fragment>
   );
 }

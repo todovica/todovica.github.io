@@ -3,18 +3,35 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 60vmin;
+  pointer-events: none;
 }
 
-html { 
-  /*
-  background: url(bg.JPG) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;*/
+.App-header {
+  background-color: #3A606E;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
 .App-link {
   color: #09d3ac;
+}
+
+.App-download-button {
+  background-color: '#3A606E';
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  margin-left: 28px;
+}
+
+.App-margin-bottom {
+  margin-bottom: 60px;
+
 }
